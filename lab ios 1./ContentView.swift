@@ -13,7 +13,7 @@ struct ContentView: View {
     let ratingScale: Double = 5.0
     
   
-    let scholarshipBonus: Double? = 500.0 //
+    let scholarshipBonus: Double? = 5000.0 //
     let CustomError: String? = nil         //
     
     
