@@ -9,7 +9,7 @@ struct Student {
 
 struct ContentView: View {
     let universityName: String = "НЛТУ України"
-    let totalStudents: Int = 1200
+    let totalStudents: Int = 7000
     let ratingScale: Double = 5.0
     
   
@@ -36,6 +36,7 @@ struct ContentView: View {
                 Text("Університет: \(universityName)")
                 Text("Всього студентів: \(totalStudents)")
                 Text("Макс. бал: \(ratingScale, specifier: "%.1f")")
+                
             }
             .padding()
             .background(Color.gray.opacity(0.1))
