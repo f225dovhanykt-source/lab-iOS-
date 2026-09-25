@@ -59,9 +59,9 @@ struct ContentView: View {
                 
               
                 ForEach(studentsArray, id: \.name) { student in
-                    HStack {
+                    HStack { // все верх
                         Text("• \(student.name)")
-                        Spacer()
+                        Spacer() //заповнює
                         Text("Курс: \(student.course)")
                         Spacer()
                         Text("Бал: \(student.averageScore, specifier: "%.1f")")
