@@ -1,38 +1,64 @@
+//
+//  UserProfile.swift
+//  Lab3_Storyboard
+//
+//  Модель даних анкети користувача.
+//  Поля класу відповідають полям форми на екрані.
+//
+
 import Foundation
 
-
+/// Клас, що зберігає дані, введені користувачем в анкету.
 class UserProfile {
-    var firstName: String
-    var lastName: String
-    var age: Int?
-    var email: String?
-    var specialty: String
-    var livesInDormitory: Bool    
+
+    // MARK: - Поля анкети
+
+    var firstName: String          // Ім'я (обов'язкове)
+    var lastName: String           // Прізвище (обов'язкове)
+    var email: String?             // Email (необов'язковий — optional)
+    var age: Int?                  // Вік (необов'язковий — optional)
+    var city: String               // Місто, обране в PickerView
+    var wantsNewsletter: Bool      // Підписка на новини (UISwitch)
+
+    // MARK: - Ініціалізатор
 
     init(firstName: String,
          lastName: String,
-         age: Int?,
          email: String?,
-         specialty: String,
-         livesInDormitory: Bool) {
+         age: Int?,
+         city: String,
+         wantsNewsletter: Bool) {
         self.firstName = firstName
         self.lastName = lastName
-        self.age = age
         self.email = email
-        self.specialty = specialty
-        self.livesInDormitory = livesInDormitory
+        self.age = age
+        self.city = city
+        self.wantsNewsletter = wantsNewsletter
     }
 
-  
-    func printInfo() {
-        print("===== Анкета користувача =====")
-        print("Ім'я: \(firstName)")
-        print("Прізвище: \(lastName.isEmpty ? "не вказано" : lastName)")
-        // Розгортання опціоналів: якщо значення немає — виводимо «не вказано»
-        print("Вік: \(age.map { String($0) } ?? "не вказано")")
-        print("E-mail: \(email ?? "не вказано")")
-        print("Спеціальність: \(specialty)")
-        print("Проживає в гуртожитку: \(livesInDormitory ? "так" : "ні")")
-        print("==============================")
+    // MARK: - Вивід даних
+
+    /// Повертає текстовий опис анкети.
+    /// Для optional-полів, якщо значення відсутнє, виводиться «не вказано».
+    func description() -> String {
+        let emailText = email ?? "не вказано"
+        let ageText = age.map { "\($0)" } ?? "не вказано"
+        let newsletterText = wantsNewsletter ? "так" : "ні"
+
+        return """
+        ===== Анкета користувача =====
+        Ім'я:              \(firstName)
+        Прізвище:          \(lastName)
+        Email:             \(emailText)
+        Вік:               \(ageText)
+        Місто:             \(city)
+        Підписка на новини: \(newsletterText)
+        ==============================
+        """
+    }
+
+    /// Виводить анкету в консоль Xcode.
+    func printToConsole() {
+        print(description())
     }
 }

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="scV-01-a01">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="stK-01-a01">
+                                        <rect key="frame" x="20" y="20" width="353" height="660"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="imG-01-a01">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="hIm-01-a01"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Анкета користувача" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiT-01-a01">
+                                                <rect key="frame" x="0.0" y="132" width="353" height="29"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ім'я *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tF1-01-a01">
+                                                <rect key="frame" x="0.0" y="173" width="353" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Прізвище *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tF2-01-a01">
+                                                <rect key="frame" x="0.0" y="219" width="353" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tF3-01-a01">
+                                                <rect key="frame" x="0.0" y="265" width="353" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="none" keyboardType="emailAddress" returnKeyType="next"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Вік" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tF4-01-a01">
+                                                <rect key="frame" x="0.0" y="311" width="353" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Місто:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciL-01-a01">
+                                                <rect key="frame" x="0.0" y="357" width="353" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piK-01-a01">
+                                                <rect key="frame" x="0.0" y="389" width="353" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="hPk-01-a01"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hsT-01-a01">
+                                                <rect key="frame" x="0.0" y="551" width="353" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Підписка на новини" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neL-01-a01">
+                                                        <rect key="frame" x="0.0" y="5.5" width="296" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="swI-01-a01">
+                                                        <rect key="frame" x="304" y="0.0" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btN-01-a01">
+                                                <rect key="frame" x="0.0" y="594" width="353" height="34"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <state key="normal" title="Зберегти анкету"/>
+                                                <connections>
+                                                    <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acT-01-a01"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reL-01-a01">
+                                                <rect key="frame" x="0.0" y="640" width="353" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="stK-01-a01" firstAttribute="leading" secondItem="cLG-01-a01" secondAttribute="leading" constant="20" id="cn1-01-a01"/>
+                                    <constraint firstItem="stK-01-a01" firstAttribute="top" secondItem="cLG-01-a01" secondAttribute="top" constant="20" id="cn2-01-a01"/>
+                                    <constraint firstItem="cLG-01-a01" firstAttribute="trailing" secondItem="stK-01-a01" secondAttribute="trailing" constant="20" id="cn3-01-a01"/>
+                                    <constraint firstItem="cLG-01-a01" firstAttribute="bottom" secondItem="stK-01-a01" secondAttribute="bottom" constant="20" id="cn4-01-a01"/>
+                                    <constraint firstItem="stK-01-a01" firstAttribute="width" secondItem="fLG-01-a01" secondAttribute="width" constant="-40" id="cn5-01-a01"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="cLG-01-a01"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="fLG-01-a01"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="scV-01-a01" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cn6-01-a01"/>
+                            <constraint firstItem="scV-01-a01" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cn7-01-a01"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="scV-01-a01" secondAttribute="trailing" id="cn8-01-a01"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="scV-01-a01" secondAttribute="bottom" id="cn9-01-a01"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="scV-01-a01" id="ou1-01-a01"/>
+                        <outlet property="avatarImageView" destination="imG-01-a01" id="ou2-01-a01"/>
+                        <outlet property="titleLabel" destination="tiT-01-a01" id="ou3-01-a01"/>
+                        <outlet property="firstNameTextField" destination="tF1-01-a01" id="ou4-01-a01"/>
+                        <outlet property="lastNameTextField" destination="tF2-01-a01" id="ou5-01-a01"/>
+                        <outlet property="emailTextField" destination="tF3-01-a01" id="ou6-01-a01"/>
+                        <outlet property="ageTextField" destination="tF4-01-a01" id="ou7-01-a01"/>
+                        <outlet property="cityPickerView" destination="piK-01-a01" id="ou8-01-a01"/>
+                        <outlet property="newsletterSwitch" destination="swI-01-a01" id="ou9-01-a01"/>
+                        <outlet property="submitButton" destination="btN-01-a01" id="oua-01-a01"/>
+                        <outlet property="resultLabel" destination="reL-01-a01" id="oub-01-a01"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
